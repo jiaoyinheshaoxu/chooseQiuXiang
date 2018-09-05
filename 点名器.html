@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	body{
+		background: #CCC;
+		background-size:cover;
+	}
+	#h1{
+		display: block;
+		width: 20%;
+		margin-left: 40%;
+		height: 80px;
+		margin: 0 auto;
+		border: 1px solid indianred;
+		border-radius: 20px;
+		font-size: 30px;
+		line-height: 80px;
+		background: indianred;
+		color: green;
+		text-align: center;
+		margin-top:250px;
+	}
+	#h2{
+		width: 250px;
+		margin: 0 auto;
+		margin-top: 100px;
+		font-size: 60px;
+		color: red;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+<button id="h1">Start</button>
+<h2 id="h2">祝你好运</h2>
+	<script>
+	
+	var arr=[
+		"江新 ",
+		"王旭升",
+		"金浩",
+		"尹春红",
+		"赵鹏勤",
+		
+		"盛涛",
+		"郑立博",
+		"刁立雪",
+		"朱家仪",
+		"简书金",
+		
+		"任凯丽",
+		"刘沙",
+		"包义彭",
+		"刘雪",
+		"华炜超",
+		
+		"徐晓晓",
+		"韩佳慧",
+		"桂志刚",
+		"任乘佑",
+		"郭彪",
+		
+		"何少旭",
+		"刘超",
+		"申赛赛",
+		"叶永喜",
+		"李闯欣",
+		
+		"张浩洋",
+		"承复兴",
+		"陈娟"
+		
+	];
+	var h1=document.getElementById('h1');
+	var h2=document.getElementById('h2');
+	var a=1;
+	var time=null;
+	h1.onclick=function(){
+		if (a==1) {
+			h1.innerHTML='Stop';
+			time=setInterval(function(){
+				h2.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+			},50);
+			a=0;
+		}else{
+			clearInterval(time);
+			h1.innerHTML='Start';
+			a=1;
+		}
+	}
+	</script>
+</body>
+</html>
