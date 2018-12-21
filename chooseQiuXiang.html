@@ -43,49 +43,26 @@
 <script>	
 	var arr=[
 		"江新 ",
-		"王旭升",
-		"金浩",
 		"尹春红",
-		"赵鹏勤",
+		"桂志刚",
+		
+		"简书金",
+		"郭聪",
+		"于皓男",
 		
 		"盛涛",
-		"郑立博",
-		"刁立雪",
-		"朱家仪",
-		"简书金",
-		
-		"任凯丽",
-		"刘沙",
-		"包义彭",
 		"刘雪",
-		"华炜超",
-		
-		"徐晓晓",
-		"韩佳慧",
-		"桂志刚",
-		"任乘佑",
-		"郭彪",
-		
-		"刘超",
-		"华炜超",
-		"申赛赛",
-		"叶永喜",
-		"李闯欣",
-		
-		"包义彭",
-		"张浩洋",
-		"承复兴",
 		"陈娟",
-		"包义彭",
 		
-		"华炜超",
+		"申赛",
+		"李闯欣",
 		"何少旭"
-		
 	];
 	var h1=document.getElementById('h1');
 	var h2=document.getElementById('h2');
 	var a=1;
 	var time=null;
+	var clickFlag = 1;
 	h1.onclick=function(){
 		if (a==1) {
 			h1.innerHTML='结束';
@@ -95,6 +72,18 @@
 			a=0;
 		}else{
 			clearInterval(time);
+//			clickFlag ++;
+//			switch (clickFlag % 3){
+//				case 1:
+//					h2.innerHTML = "江新"
+//					break;
+//				case 2:
+//					h2.innerHTML = "尹春红"
+//					break;
+//				case 0:
+//					h2.innerHTML = "桂志刚"
+//					break;
+//			}
 			h1.innerHTML='开始';
 			a=1;
 		}
